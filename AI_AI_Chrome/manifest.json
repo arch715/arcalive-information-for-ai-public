@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "AI_AI Project",
+  "version": "0.3.32",
+  "description": "아카라이브 게시글 정보를 생성형 AI에 전달하기 위해 추출합니다.",
+  "host_permissions": [
+    "https://arca.live/*",
+    "https://ac.arca.live/*",
+    "https://ac-o.arca.live/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arca.live/b/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "AI_AI 실행"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "save-bridge.html"
+      ],
+      "matches": [
+        "https://arca.live/*"
+      ]
+    }
+  ]
+}

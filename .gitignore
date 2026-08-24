@@ -1,0 +1,38 @@
+﻿# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Chrome local/debug data
+**/chrome-debug-profile/
+**/Default/Cookies
+**/Default/Login Data
+**/Default/History
+**/Local State
+
+# Generated AI_AI packages and local outputs
+AI_AI_Chrome_v*.zip
+AI_AI_*_package*.zip
+AI_AI_*_article*.json
+*.crdownload
+
+# Temporary files
+*.tmp
+*.temp

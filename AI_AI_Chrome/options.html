@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+    <title>AI_AI 설정</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+      }
+
+      body {
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.55;
+      }
+
+      fieldset {
+        border: 1px solid #8888;
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      button {
+        margin: 8px 8px 0 0;
+        padding: 8px 12px;
+      }
+
+      #status {
+        margin-top: 16px;
+        padding: 12px;
+        border-radius: 6px;
+        background: #8882;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AI_AI 설정</h1>
+
+    <fieldset>
+      <legend>저장 위치</legend>
+
+      <p>
+        <label>
+          <input
+            id="default-mode"
+            type="radio"
+            name="save-mode"
+            value="default"
+            disabled
+          >
+          Chrome 기본 다운로드 위치
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input
+            id="custom-mode"
+            type="radio"
+            name="save-mode"
+            value="custom"
+            disabled
+          >
+          사용자 지정 폴더
+        </label>
+      </p>
+
+      <p>
+        현재 사용자 지정 폴더:
+        <strong id="folder-name">설정되지 않음</strong>
+      </p>
+
+      <p>
+        <button
+          id="choose-directory"
+          type="button"
+        >사용자 지정 폴더 선택</button>
+
+        <button
+          id="request-permission"
+          type="button"
+        >권한 다시 허용</button>
+
+        <button
+          id="use-default"
+          type="button"
+        >기본 다운로드 위치 사용</button>
+      </p>
+
+      <div
+        id="status"
+        role="status"
+        aria-live="polite"
+      >상태 확인 중…</div>
+    </fieldset>
+
+    <script src="save-location-db.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
